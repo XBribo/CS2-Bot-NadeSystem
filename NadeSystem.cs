@@ -359,7 +359,7 @@ public partial class NadeSystemPlugin : BasePlugin
         IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, int, int, CSmokeGrenadeProjectile>
         _smokeCreate = new(
             RuntimeInformation.IsOSPlatform(OSPlatform.Linux)
-                ? @"55 4C 89 C1 48 89 E5 41 57 49 89 FF 41 56 45 89 CE"
+                ? @"55 4C 89 C1 48 89 E5 41 57 41 56 49 89 FE 41 55 45 89 CD 41 54 4D 89 C4"
                 : @"48 8B C4 48 89 58 ? 48 89 68 ? 48 89 70 ? 57 41 56 41 57 48 81 EC ? ? ? ? 48 8B B4 24");
 
     // CHEGrenadeProjectile::Create(pos, ang, vel, vel, owner, itemDef)
