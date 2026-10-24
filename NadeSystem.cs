@@ -32,6 +32,7 @@ public partial class NadeSystemPlugin : BasePlugin
     private string DataDir => Path.Combine(ModuleDirectory, "grenades");
     // precache all the nades on this map
     private List<GrenadeData> _mapNades = new();
+    private readonly Dictionary<(string Id, string? Type), GrenadeData> _mapNadesById = new();
     // Static trigger-zone index rebuilt whenever the active map data is loaded
     private const float GrenadeZoneGridSize = 256f;
     private Dictionary<(int X, int Y), List<GrenadeData>> _grenadeZoneGrid = new();
